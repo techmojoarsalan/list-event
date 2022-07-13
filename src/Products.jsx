@@ -55,11 +55,20 @@ export default function Products() {
         placeholder="category filter"
         onKeyDown={filterCategory}
       />
+      <button
+        onClick={() =>
+          filteredProducts.map((i) => console.log(i.title, i.category))
+        }
+      >
+        Submit Button
+      </button>
       <table>
         <thead>
           <tr>
-            <th>Product Title</th>
-            <th> Category</th>
+            <th>Product Title <button onClick={sortTitle}> Sort title </button>
+</th>
+            <button onClick={sortCategory}> Sort Category</button>
+            <th> Category </th>
             <th> Price </th>
             <th> Rating</th>
           </tr>
@@ -77,15 +86,7 @@ export default function Products() {
           );
         })}
       </table>
-      <button
-        onClick={() =>
-          filteredProducts.map((i) => console.log(i.title + "" + i.category))
-        }
-      >
-        Submit Button
-      </button>
-      <button onClick={sortTitle}> Sort title </button>
-      <button onClick={sortCategory}> Sort Category</button>
+      
     </div>
   );
 }

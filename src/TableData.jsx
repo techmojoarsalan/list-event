@@ -36,7 +36,6 @@ export default function TableData() {
       setFilteredUsers([...users].sort((a, b) => b.id - a.id));
        
     }
-    
   return (
     <div>
       <table>
