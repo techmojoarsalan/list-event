@@ -41,9 +41,15 @@ export default function TableData() {
       <table>
         <thead>
           <tr>
-            <th>Sr no.</th>
-            <th> name</th>
-            <th> email </th>
+            <th>Sr no.<button onClick={sortAccending}>↓</button>
+      <button onClick={sortDecending}>↑</button></th>
+            <th> name  
+      <button onClick={sortName}>name</button>
+               </th>
+            <th> email 
+      <button onClick={sortEmail}>Email</button>
+
+            </th>
             <th> address</th>
           </tr>
         </thead>
@@ -60,10 +66,9 @@ export default function TableData() {
           );
         })}
       </table>
-      <button onClick={sortName}>Sort name</button>
-      <button onClick={sortEmail}>sort Email</button>
-      <button onClick={sortAccending}>Accending</button>
-      <button onClick={sortDecending}>Decending</button>
+      {/* <button onClick={sortName}>name</button> */}
+
+      
       
     </div>
   );
