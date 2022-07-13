@@ -33,7 +33,7 @@ code {
   input{
     width: max-content;
     margin: .5rem;
-    padding: .5rem;
+    padding: .3rem;
     border: 1px solid #dddddd;
     border-radius: .5rem;
     text-align: center;
